@@ -1,4 +1,11 @@
 {
   "projectId": "y724zo",
-  "baseUrl": "https://talentpartner.jobhopin.com"
+  "baseUrl": "https://sandbox-talentpartner.jobhopin.com",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 }

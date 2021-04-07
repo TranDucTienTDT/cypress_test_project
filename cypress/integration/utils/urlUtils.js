@@ -1,6 +1,6 @@
 class urlUtils{
     visit(baseUrl){
-        return cy.get(baseUrl)
+        return cy.visit(baseUrl)
     }
 
     reload(){

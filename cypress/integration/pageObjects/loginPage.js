@@ -1,4 +1,10 @@
+import LocatorUtils from '../utils/locatorUtils'
+
 class loginPage{
+
+    locatorUtils = new LocatorUtils('input[name="email"]')
+
+    //locator
     emailTxt(){
         return cy.get('input[name="email"]')
     }
@@ -6,13 +12,14 @@ class loginPage{
         return cy.get('input[name="password"]')
     }
     signInBtn(){
-        return cy.get('button[type="submit"]').click()
+        return cy.get('button[type="submit"]')
     }
 
 
-    //function
+    //page functions
     login(email, password){
-        this.emailTxt().type(email)
+        this.locatorUtils.get().type(email)
+        //this.emailTxt().type(email)
         this.passwordTxt().type(password)
         this.signInBtn().click()
     }
