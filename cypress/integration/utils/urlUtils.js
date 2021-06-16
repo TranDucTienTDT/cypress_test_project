@@ -1,6 +1,6 @@
 class urlUtils{
     visit(baseUrl){
-        return cy.visit(baseUrl)
+        return cy.visit(baseUrl).wait(10000)
     }
 
     reload(){
